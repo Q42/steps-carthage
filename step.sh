@@ -10,4 +10,6 @@ fi
 
 #
 # Bootstrap
+export CODE_SIGNING_REQUIRED=NO
+export CODE_SIGNING_ALLOWED=NO
 carthage "${carthage_command}" --platform iOS --verbose ${NO_USE_BINARIES}
