@@ -10,6 +10,7 @@ fi
 
 #
 # Bootstrap
-export CODE_SIGNING_REQUIRED=NO
-export CODE_SIGNING_ALLOWED=NO
-carthage "${carthage_command}" --platform iOS --verbose ${NO_USE_BINARIES}
+#carthage "${carthage_command}" --platform iOS --verbose ${NO_USE_BINARIES}
+carthage checkout --verbose
+find Carthage -name *.pbxproj -exec sed -i bak 's/CODE_SIGN_IDENTITY = "iPhone Developer"/CODE_SIGN_IDENTITY = "iPhone Distribution"/' '{}' +
+carthage build --platform iOS --verbose ${NO_USE_BINARIES}
