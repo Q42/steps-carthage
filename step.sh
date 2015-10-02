@@ -10,4 +10,4 @@ fi
 
 #
 # Bootstrap
-carthage "${carthage_command}" --platform iOS ${NO_USE_BINARIES}
+carthage "${carthage_command}" --platform iOS --verbose ${NO_USE_BINARIES}
