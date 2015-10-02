@@ -22,19 +22,6 @@ dependencies:
   - manager: brew
     name: carthage
 inputs:
-  - carthage_command: "bootstrap"
-    opts:
-      title: Carthage command to run
-      summary: Select a command to set up your dependencies with.
-      description: |-
-        Select a command to set up your dependencies with.
-        * `bootstrap`: initializes the project with checking out & building all dependencies. (default)
-        * `update`: updates all dependencies.
-        * `build`: builds all checked out items.
-      value_options:
-      - bootstrap
-      - update
-      - build
   - no_use_binaries: "false"
     opts:
       title: Set no use binaries flag
